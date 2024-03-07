@@ -50,3 +50,18 @@ http://localhost:3000/{formId}/filteredResponses?offset=0&limit=150&filters=[you
 ```
 Replace `{formId}` with your actual form ID from Fillout.com, and `[your_filters_here]` with a JSON stringified array of filter objects according to your filtering needs.
 
+### Example:
+
+```sh
+curl  -X GET 'https://fillout-api-server.onrender.com/cLZojxk94ous/filteredResponses'
+```
+
+```sh
+curl  -X GET \
+  'https://fillout-api-server.onrender.com/cLZojxk94ous/filteredResponses?filters=%5B%7B%22id%22%3A%22bE2Bo4cGUv49cjnqZ4UnkW%22%2C%22condition%22%3A%22equals%22%2C%22value%22%3A%22Johnny%22%7D%5D'
+```
+
+```sh
+curl  -X GET \
+  'https://fillout-api-server.onrender.com/cLZojxk94ous/filteredResponses?filters=%5B%7B%22id%22%3A%22bE2Bo4cGUv49cjnqZ4UnkW%22%2C%22condition%22%3A%22equals%22%2C%22value%22%3A%22Johnny%22%7D%2C%7B%22id%22%3A%22dSRAe3hygqVwTpPK69p5td%22%2C%22condition%22%3A%22greater_than%22%2C%22value%22%3A%222024-02-01%22%7D%5D'
+```
